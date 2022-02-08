@@ -21,8 +21,8 @@
 
 	/* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
 	.section .slidelist label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
-	.section .slidelist .left {left:-1200px;background:url('https://user-images.githubusercontent.com/80767378/151693253-6af0c53e-d7d8-49b0-b9b5-c50e8a6d2929.png') center center / 100% no-repeat;} /* LEFT -300px로 화살표가 안보이게 되어있도록 준 스타일 */
-	.section .slidelist .right {right:-1200px;background:url('https://user-images.githubusercontent.com/80767378/151693276-7bfcee67-326a-4d99-8ee8-25338c97499f.png') center center / 100% no-repeat;} /* RIGHT -300px로 화살표가 안보이게 되어있도록 준 스타일 */
+	.section .slidelist .left {left:-1400px;background:url('https://user-images.githubusercontent.com/80767378/151693253-6af0c53e-d7d8-49b0-b9b5-c50e8a6d2929.png') center center / 100% no-repeat;} /* LEFT -300px로 화살표가 안보이게 되어있도록 준 스타일 */
+	.section .slidelist .right {right:-1400px;background:url('https://user-images.githubusercontent.com/80767378/151693276-7bfcee67-326a-4d99-8ee8-25338c97499f.png') center center / 100% no-repeat;} /* RIGHT -300px로 화살표가 안보이게 되어있도록 준 스타일 */
 
 	/* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
 	.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
@@ -37,6 +37,8 @@
 	.section input[id="slide10"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-900%);}
 	.section input[id="slide11"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1000%);}
 	.section input[id="slide12"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1100%);}
+    .section input[id="slide13"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1200%);}
+    .section input[id="slide14"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1300%);}
 
 	/* INPUT이 체크되면 변화값이 LEFT,RIGHT에 전달되는 스타일 */
 	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .left {left:30px;transition:all .35s ease .5s;} /* 1번 INPUT이 체크되면 1번 슬라이드의 왼쪽 화살표의 LEFT값이 변하면서 나타나도록 준 스타일 */
@@ -63,6 +65,10 @@
 	.section input[id="slide11"]:checked ~ .slidewrap li:nth-child(11) .right {right:30px;transition:all .35s ease .5s;}
 	.section input[id="slide12"]:checked ~ .slidewrap li:nth-child(12) .left {left:30px;transition:all .35s ease .5s;} 
 	.section input[id="slide12"]:checked ~ .slidewrap li:nth-child(12) .right {right:30px;transition:all .35s ease .5s;}
+    .section input[id="slide13"]:checked ~ .slidewrap li:nth-child(13) .left {left:30px;transition:all .35s ease .5s;} 
+	.section input[id="slide13"]:checked ~ .slidewrap li:nth-child(13) .right {right:30px;transition:all .35s ease .5s;}
+    .section input[id="slide14"]:checked ~ .slidewrap li:nth-child(14) .left {left:30px;transition:all .35s ease .5s;} 
+	.section input[id="slide14"]:checked ~ .slidewrap li:nth-child(14) .right {right:30px;transition:all .35s ease .5s;}
 	</style>
 </head>
 <body>
@@ -80,12 +86,14 @@
 		<input type="radio" name="slide" id="slide10">
 		<input type="radio" name="slide" id="slide11">
 		<input type="radio" name="slide" id="slide12">
+        <input type="radio" name="slide" id="slide13">
+        <input type="radio" name="slide" id="slide14">
 
 		<div class="slidewrap">
 			<ul class="slidelist">
 				<li>
 					<a>
-						<label for="slide12" class="left"></label>
+						<label for="slide14" class="left"></label>
 						<img src="https://user-images.githubusercontent.com/80767378/152343604-2968946d-82a7-4787-8cca-03422fc1d2d6.jpg">
 						<label for="slide02" class="right"></label>
 					</a>
@@ -118,51 +126,65 @@
 						<label for="slide06" class="right"></label>
 					</a>
 				</li>
-				<li>
+                <li>
 					<a>
 						<label for="slide05" class="left"></label>
-						<img src="https://user-images.githubusercontent.com/80767378/152343089-1613e0cc-47d9-4a2d-9f2c-d618283f7c2d.jpg">
+						<img src="https://user-images.githubusercontent.com/80767378/152951271-2002aa00-0c77-493b-b15d-76520c0116e4.jpg">
 						<label for="slide07" class="right"></label>
 					</a>
 				</li>
-				<li>
+                <li>
 					<a>
 						<label for="slide06" class="left"></label>
-						<img src="https://user-images.githubusercontent.com/80767378/152343111-2354de86-1b5e-438c-a6aa-9d14aee3c4ec.jpg">
+						<img src="https://user-images.githubusercontent.com/80767378/152951370-65cbfa6c-04ea-40a1-aa0a-6d83db01fa86.jpg">
 						<label for="slide08" class="right"></label>
 					</a>
 				</li>
-				<li>
+                <li>
 					<a>
 						<label for="slide07" class="left"></label>
-						<img src="https://user-images.githubusercontent.com/80767378/152343145-63eb8331-db12-4fad-9821-221eaca261fb.jpg">
+						<img src="https://user-images.githubusercontent.com/80767378/152343089-1613e0cc-47d9-4a2d-9f2c-d618283f7c2d.jpg">
 						<label for="slide09" class="right"></label>
 					</a>
 				</li>
 				<li>
 					<a>
 						<label for="slide08" class="left"></label>
-						<img src="https://user-images.githubusercontent.com/80767378/152343159-8f792ed7-7ecf-40aa-bd6e-db138aa43dd4.jpg">
+						<img src="https://user-images.githubusercontent.com/80767378/152343111-2354de86-1b5e-438c-a6aa-9d14aee3c4ec.jpg">
 						<label for="slide10" class="right"></label>
 					</a>
 				</li>
 				<li>
 					<a>
 						<label for="slide09" class="left"></label>
-						<img src="https://user-images.githubusercontent.com/80767378/152343189-c11f53ca-a4e5-468b-a276-076c53038e5c.jpg">
+						<img src="https://user-images.githubusercontent.com/80767378/152343145-63eb8331-db12-4fad-9821-221eaca261fb.jpg">
 						<label for="slide11" class="right"></label>
 					</a>
 				</li>
 				<li>
 					<a>
 						<label for="slide10" class="left"></label>
-						<img src="https://user-images.githubusercontent.com/80767378/152343222-778c0816-b93f-4fd7-b694-33ca49f7e5ee.jpg">
+						<img src="https://user-images.githubusercontent.com/80767378/152343159-8f792ed7-7ecf-40aa-bd6e-db138aa43dd4.jpg">
 						<label for="slide12" class="right"></label>
 					</a>
 				</li>
 				<li>
 					<a>
 						<label for="slide11" class="left"></label>
+						<img src="https://user-images.githubusercontent.com/80767378/152343189-c11f53ca-a4e5-468b-a276-076c53038e5c.jpg">
+						<label for="slide13" class="right"></label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<label for="slide12" class="left"></label>
+						<img src="https://user-images.githubusercontent.com/80767378/152343222-778c0816-b93f-4fd7-b694-33ca49f7e5ee.jpg">
+						<label for="slide14" class="right"></label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<label for="slide13" class="left"></label>
 						<img src="https://user-images.githubusercontent.com/80767378/152343246-7fb8340f-6f86-40f5-a63f-c0ac7d73fdd0.jpg">
 						<label for="slide01" class="right"></label>
 					</a>
